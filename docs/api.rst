@@ -3,9 +3,9 @@
 API Documentation
 =================
 
-Below please find the documentation for the public classes and functions of ``elasticsearch_dsl``.
+Below please find the documentation for the public classes and functions of ``elasticsearch5_dsl``.
 
-.. py:module:: elasticsearch_dsl
+.. py:module:: elasticsearch5_dsl
 
 Search
 ------

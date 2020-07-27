@@ -1,10 +1,10 @@
 from datetime import datetime
 from pytz import timezone
 
-from elasticsearch import ConflictError, NotFoundError, RequestError
+from elasticsearch5 import ConflictError, NotFoundError, RequestError
 
-from elasticsearch_dsl import DocType, Date, Text, Keyword, construct_field, Mapping
-from elasticsearch_dsl.utils import AttrList
+from elasticsearch5_dsl import DocType, Date, Text, Keyword, construct_field, Mapping
+from elasticsearch5_dsl.utils import AttrList
 
 from pytest import raises
 

@@ -44,7 +44,7 @@ class IndexBody(object):
     def mapping(self, mapping):
         """
         Associate a mapping (an instance of
-        :class:`~elasticsearch_dsl.Mapping`) with this index.
+        :class:`~elasticsearch5_dsl.Mapping`) with this index.
         This means that, when this index is created, it will contain the
         mappings for the document type defined by those mappings.
         """
@@ -52,7 +52,7 @@ class IndexBody(object):
 
     def doc_type(self, doc_type):
         """
-        Associate a :class:`~elasticsearch_dsl.DocType` subclass with an index.
+        Associate a :class:`~elasticsearch5_dsl.DocType` subclass with an index.
         This means that, when this index is created, it will contain the
         mappings for the ``DocType``. If the ``DocType`` class doesn't have a
         default index yet, name of the ``Index`` instance will be used. Can be
@@ -109,7 +109,7 @@ class IndexBody(object):
 
         Example::
 
-            from elasticsearch_dsl import analyzer, tokenizer
+            from elasticsearch5_dsl import analyzer, tokenizer
 
             my_analyzer = analyzer('my_analyzer',
                 tokenizer=tokenizer('trigram', 'nGram', min_gram=3, max_gram=3),
@@ -172,7 +172,7 @@ class IndexTemplate(IndexBody):
 
     def search(self):
         """
-        Return a :class:`~elasticsearch_dsl.Search` object searching over all
+        Return a :class:`~elasticsearch5_dsl.Search` object searching over all
         the indices belonging to this template and its ``DocType``\s.
         """
         return Search(
@@ -184,7 +184,7 @@ class IndexTemplate(IndexBody):
 class Index(IndexBody):
     def search(self):
         """
-        Return a :class:`~elasticsearch_dsl.Search` object searching over this
+        Return a :class:`~elasticsearch5_dsl.Search` object searching over this
         index and its ``DocType``\s.
         """
         return Search(
