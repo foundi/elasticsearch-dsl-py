@@ -227,7 +227,7 @@ class FacetedSearch(object):
         """
         :arg query: the text to search for
         :arg filters: facet values to filter
-        :arg sort: sort information to be passed to :class:`~elasticsearch_dsl.Search`
+        :arg sort: sort information to be passed to :class:`~elasticsearch5_dsl.Search`
         """
         self._query = query
         self._filters = {}

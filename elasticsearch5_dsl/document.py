@@ -1,7 +1,7 @@
 import collections
 import re
 
-from elasticsearch.exceptions import NotFoundError, RequestError
+from elasticsearch5.exceptions import NotFoundError, RequestError
 from six import iteritems, add_metaclass
 
 from .field import Field
@@ -152,7 +152,7 @@ class DocType(ObjectBase):
     @classmethod
     def search(cls, using=None, index=None):
         """
-        Create an :class:`~elasticsearch_dsl.Search` instance that will search
+        Create an :class:`~elasticsearch5_dsl.Search` instance that will search
         over this ``DocType``.
         """
         return Search(

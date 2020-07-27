@@ -37,7 +37,7 @@ declaring a ``FacetedSearch`` subclass:
 ``sort``
   tuple or list of fields on which the results should be sorted. The format of
   the individual fieldsa re to be the same as those passed to
-  :meth:`~elasticsearch_dsl.Search.sort`.
+  :meth:`~elasticsearch5_dsl.Search.sort`.
 
 
 Facets
@@ -110,7 +110,7 @@ Example
 
     from datetime import date
 
-    from elasticsearch_dsl import FacetedSearch, TermsFacet, DateHistogramFacet
+    from elasticsearch5_dsl import FacetedSearch, TermsFacet, DateHistogramFacet
 
     class BlogSearch(FacetedSearch):
         doc_types = [Article, ]

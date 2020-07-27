@@ -55,7 +55,7 @@ Let's have a typical search request written directly as a ``dict``:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
+    from elasticsearch5 import Elasticsearch
     client = Elasticsearch()
 
     response = client.search(
@@ -99,8 +99,8 @@ Let's rewrite the example using the Python DSL:
 
 .. code:: python
 
-    from elasticsearch import Elasticsearch
-    from elasticsearch_dsl import Search
+    from elasticsearch5 import Elasticsearch
+    from elasticsearch5_dsl import Search
 
     client = Elasticsearch()
 
@@ -141,8 +141,8 @@ Let's have a simple Python class representing an article in a blogging system:
 .. code:: python
 
     from datetime import datetime
-    from elasticsearch_dsl import DocType, Date, Integer, Keyword, Text
-    from elasticsearch_dsl.connections import connections
+    from elasticsearch5_dsl import DocType, Date, Integer, Keyword, Text
+    from elasticsearch5_dsl.connections import connections
 
     # Define a default Elasticsearch client
     connections.create_connection(hosts=['localhost'])
@@ -212,8 +212,8 @@ search class to simplify searching and filtering.
 
 .. code:: python
 
-    from elasticsearch_dsl import FacetedSearch
-    from elasticsearch_dsl.aggs import Terms, DateHistogram
+    from elasticsearch5_dsl import FacetedSearch
+    from elasticsearch5_dsl.aggs import Terms, DateHistogram
 
     class BlogSearch(FacetedSearch):
         doc_types = [Article, ]

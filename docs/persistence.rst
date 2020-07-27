@@ -13,7 +13,7 @@ The mapping definition follows a similar pattern to the query dsl:
 
 .. code:: python
 
-    from elasticsearch_dsl import Keyword, Mapping, Nested, Text
+    from elasticsearch5_dsl import Keyword, Mapping, Nested, Text
 
     # name your type
     m = Mapping('my-type')
@@ -82,7 +82,7 @@ handle its creation:
 
 .. code:: python
 
-    from elasticsearch_dsl import analyzer, tokenizer
+    from elasticsearch5_dsl import analyzer, tokenizer
 
     my_analyzer = analyzer('my_analyzer',
         tokenizer=tokenizer('trigram', 'nGram', min_gram=3, max_gram=3),
@@ -108,7 +108,7 @@ If you want to create a model-like wrapper around your documents, use the
 .. code:: python
 
     from datetime import datetime
-    from elasticsearch_dsl import DocType, Date, Nested, Boolean, \
+    from elasticsearch5_dsl import DocType, Date, Nested, Boolean, \
         analyzer, InnerObjectWrapper, Completion, Keyword, Text
 
     html_strip = analyzer('html_strip',
@@ -266,7 +266,7 @@ accessed through the ``_doc_type`` attribute of the class:
     Post._doc_type.parent
 
 The ``_doc_type`` attribute is also home to the ``refresh`` method which will
-update the mapping on the ``DocType`` from elasticsearch. This is very useful
+update the mapping on the ``DocType`` from elasticsearch5. This is very useful
 if you use dynamic mappings and want the class to be aware of those fields (for
 example if you wish the ``Date`` fields to be properly (de)serialized):
 
@@ -378,7 +378,7 @@ in a migration:
 
 .. code:: python
 
-    from elasticsearch_dsl import Index, DocType, Text, analyzer
+    from elasticsearch5_dsl import Index, DocType, Text, analyzer
 
     blogs = Index('blogs')
 
